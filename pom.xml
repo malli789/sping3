@@ -4,12 +4,6 @@
 	<groupId>Spring3HibernateApp</groupId>
 	<artifactId>Spring3HibernateApp</artifactId>
 	<packaging>war</packaging>
-	<configuration>
-			<url>http://localhost:8080/manager/text</url>
-			<server>TomcatServer</server>
-			<path>/springApp</path>
-		</configuration>
-
 	<scm>
 		<developerConnection>
 			scm:git:git@github.com:OpsTree/ContinuousIntegration.git
