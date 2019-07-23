@@ -15,7 +15,7 @@ pipeline {
        stage ('Building') {
           steps {
            sh '''
-          docker run -i  -v /var/lib/jenkins/workspace/123:/src/test maven:latest   /bin/bash -c "mvn test package" 
+          docker run -i  -v /var/lib/jenkins/workspace/123:/src/test -w /src/test maven:latest   /bin/bash -c "mvn test package" 
           '''
       }
     }
