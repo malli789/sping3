@@ -15,7 +15,7 @@ pipeline {
        stage ('Building') {
           steps {
            sh '''
-          docker run -dit   maven:latest  /bin/bash -c "mvn test package" 
+          docker run -i   maven:latest  /bin/bash -c "mvn test package" 
           '''
       }
     }
