@@ -15,7 +15,7 @@ pipeline {
        stage ('Building') {
           steps {
            sh '''
-          docker run -i --rm -v ./:/src -w /src  13c9f1285025  /bin/bash -c "mvn test package" 
+          docker run -i --rm   13c9f1285025  /bin/bash -c "mvn test package" 
           '''
       }
     }
