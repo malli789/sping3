@@ -1,10 +1,10 @@
-FROM malli789/malli-tom
+FROM malli789/test-tom
 # Required for starting application up.
 #RUN apk update && apk add /bin/sh
-ENV PROJECT_HOME /usr/local/tomcat/webapps
+#ENV PROJECT_HOME /usr/local/tomcat/webapps
+#VOLUME /usr/local/tomcat/webapps
+RUN rm -rf /usr/local/tomcat/webapps/*
+ADD target/Spring3HibernateApp.war /usr/local/tomcat/webapps/Spring3HibernateApp.war
 VOLUME /usr/local/tomcat/webapps
+EXPOSE 8080
 
-COPY target/Spring3HibernateApp.war $PROJECT_HOME/spring-boot-mongo.war
-
-WORKDIR $PROJECT_HOME
-ENTRYPOINT ["java","-war","target/recruitment-service-0.0.1.war"]
