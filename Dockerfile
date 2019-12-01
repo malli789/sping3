@@ -1,6 +1,6 @@
 FROM malli789/malli-tom
 # Required for starting application up.
-RUN apk update && apk add /bin/sh
+#RUN apk update && apk add /bin/sh
 ENV PROJECT_HOME /usr/local/tomcat/webapps
 VOLUME /usr/local/tomcat/webapps
 
