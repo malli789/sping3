@@ -1,34 +1,33 @@
-apiVersion: v1
-kind: ReplicationController
+apiVersion: apps/v1
+kind: Deployment
 metadata:
+  name: tomcat-deployment
   labels:
-    name: spring
-  name: spring-controller
+    app: tomcat
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: tomcat
   template:
     metadata:
       labels:
-        name: spring
+        app: tomcat
     spec:
       containers:
-      - image: spring-1 
-        name: spring
+      - name: tomcat
+        image: malli789/spring-1
         ports:
-        - name: spring
-          containerPort: 7070    
----
-# Node Port Service
-apiVersion: v1
+        - containerPort: 8080
+-------        
 kind: Service
+apiVersion: v1
 metadata:
-  labels:
-    name: spring
-  name: spring
+  name: tomcat-service
 spec:
-  type: NodePort
-  ports:
-    - port: 7070
-      targetPort: 7070
   selector:
-    name: spring
+    app: tomcat
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
