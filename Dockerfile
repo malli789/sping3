@@ -1,4 +1,5 @@
-FROM malli789/test-tom
+#FROM malli789/test-tom
+FROM tomcat
 # Required for starting application up.
 #RUN apk update && apk add /bin/sh
 #ENV PROJECT_HOME /usr/local/tomcat/webapps
