@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: spring-1
-        image: malli789/spring-1
+        image: malli789/spring-12
         ports:
         - containerPort: 8080
         livenessProbe:
