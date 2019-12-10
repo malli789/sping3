@@ -1,5 +1,5 @@
-#FROM malli789/test-tom
-FROM tomcat
+FROM malli789/test-tom
+#FROM tomcat
 
 #FROM tomcat
 # Required for starting application up.
