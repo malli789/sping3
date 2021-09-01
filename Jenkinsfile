@@ -15,7 +15,7 @@ pipeline {
        stage ('Building') {
           steps {
            sh '''
-          docker run -i  -v /var/lib/jenkins/workspace/malli1:/src/test -w /src/test maven:latest   /bin/bash -c "mvn clean" 
+          docker run -i  -v /var/lib/jenkins/workspace/malli1:/src/test -w /src/test maven:latest   /bin/bash -c "mvn install" 
           '''
       }
     }
