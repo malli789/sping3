@@ -31,6 +31,11 @@
       <url>scp://repo/maven2</url>
       <layout>default</layout>
     </repository>
+		 
+  <properties>
+ <maven.compiler.source>1.8</maven.compiler.source>
+ <maven.compiler.target>1.8</maven.compiler.target>
+</properties>
  </distributionManagement>
 	<reporting>
 		<plugins>
@@ -383,10 +388,7 @@
     <artifactId>pro-plugin</artifactId>
     <version>2.0.4</version>
 </dependency>
-<properties>
- <maven.compiler.source>1.8</maven.compiler.source>
- <maven.compiler.target>1.8</maven.compiler.target>
-</properties>
+
 <dependency>
     <groupId>javax.servlet</groupId>
     <artifactId>javax.servlet-api</artifactId>
