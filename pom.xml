@@ -32,10 +32,7 @@
       <layout>default</layout>
     </repository>
 		 
-  <properties>
- <maven.compiler.source>1.8</maven.compiler.source>
- <maven.compiler.target>1.8</maven.compiler.target>
-</properties>
+ 
  </distributionManagement>
 	<reporting>
 		<plugins>
